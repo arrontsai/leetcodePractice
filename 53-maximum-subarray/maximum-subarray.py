@@ -8,6 +8,7 @@ class Solution:
         maxSum = dp[0]
         for i in range(1,len(nums)):
             dp.append(max(dp[i-1]+nums[i],nums[i]))
-            maxSum = max(dp[i],maxSum)
+            if dp[i] > maxSum:
+                maxSum = dp[i]
         return maxSum
         

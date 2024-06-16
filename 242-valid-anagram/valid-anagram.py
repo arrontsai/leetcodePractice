@@ -6,6 +6,5 @@ class Solution:
         for i in range(len(s)):
             map[ord(s[i])] += 1
             map[ord(t[i])] -= 1
-        print(map)
         return True if all(n==0 for n in map) else False
         
